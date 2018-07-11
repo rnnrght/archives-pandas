@@ -6,14 +6,14 @@ There are many pandas and python tutorials out there.  Many are great, but most 
 
 This is also a brain dump document right now that I'm using to structure my thoughts.
 
-The primary audicence for these thoughts are:
+The primary audience for these thoughts are:
 
-* python novices who have completed some python and are resonably comfortable (if not strongly experienced) with working in python
-* python novices where Python is their only language or their mother tounge, so no exposure to Java or C++.
+* python novices who have completed some python and are reasonably comfortable (if not strongly experienced) with working in python
+* python novices where Python is their only language or their mother tongue, so no exposure to Java or C++.
 * people who have not had much exposure to math beyond college algebra or stats, and are not comfortable or experienced with the application of linear algebra and statistical vocabulary words to code/programming.
 * instructors who may be teaching students who come from some or all of the above
 
-The first section of this dump will be general commentary on the technical perspective, historical context, and linguistic commentary about pandas.  I've found that all these things are necessary for students learning pandas, particularly those who are very new to python and cannot immidiately tell where the normal python and pandas python are in a single block of code.
+The first section of this dump will be general commentary on the technical perspective, historical context, and linguistic commentary about pandas.  I've found that all these things are necessary for students learning pandas, particularly those who are very new to python and cannot immediately tell where the normal python and pandas python are in a single block of code.
 
 Learning pandas as a python and programming novice will require you to use your pattern adaptation skills more than normal. You will gradually start filling in any gaps you end up with, but surviving pandas is all about pattern matching to examples.
 
@@ -43,7 +43,7 @@ There are common names used for both loading the library into memory and certain
 	* `import pandas as pd` in the line of code to do this
 * `df` is the common variable name used for pandas dataframes.  These will often be numbered later on as the data is manipulated, so you'll see `df2` etc. Which isn't to say that this is the best practice, but it is common practice.
 
-Pandas is also often described as a sort of glue within Python to help people make use of tools written in other langauages or other data systems.  This is particularly nice for business or enterprise systems where tools must work across humans using a variety of tools and a mix of technological systems.
+Pandas is also often described as a sort of glue within Python to help people make use of tools written in other languages or other data systems.  This is particularly nice for business or enterprise systems where tools must work across humans using a variety of tools and a mix of technological systems.
 
 ## History of pandas
 
@@ -61,7 +61,7 @@ Operationally, it means that there are some very specific and very different syn
 
 ### Understand evolution
 
-This package is about 10 years old at this time, and was bugun by a small group of people aiming to fill in a gap they saw for the Python ecosystem at that time. Things were devoloped with a very small scale of people and for very specific tasks.  This means a few things.  All of these things are pretty normal when across all socio technical systems, and is not a dig specifically about pandas. 
+This package is about 10 years old at this time, and was begun by a small group of people aiming to fill in a gap they saw for the Python ecosystem at that time. Things were developed with a very small scale of people and for very specific tasks.  This means a few things.  All of these things are pretty normal when across all socio technical systems, and is not a dig specifically about pandas. 
 
 You will find that there are leftover bits from when things seemed clever and cool, but ended up not scaling well as more people adopted it. (who hasn't been here?)
 
@@ -71,17 +71,17 @@ So understand that things may feel strange, and that's because you'll be learnin
 
 This package was developed with strong connections to economists and related data analytics areas.  The developers are also strongly within the scientific python community, so you will see strong connections to many other packages within the scientific python stack of packages.  This is an informal name for the many tools and packages that were created for use within the scientific programming community.  These tools tend to be very focused on performing computations and optimizing the speed of those computations.  
 
-Within the pandas universe you'll see a strong bias towards certain data types and data models of the universe. It can handle many data types, but the dataframe framework that is introduced comes with its own rules on how data must be organized. You'll also see that there are several strong specializations within this ecosystem, such as timeseries data.  Pandas also builds frameworks on top of many other packages, which you will see pop up from time to time.  The strong connection to Python is also not lost, and you will usually see some core python tools and data structures appear, but this pattern is gradually going away as the pandas framework begins to support more activites.  However, this can also be a sign of someone newer to pandas who isn't yet intimately femiliar with many of the tools available in the library.
+Within the pandas universe you'll see a strong bias towards certain data types and data models of the universe. It can handle many data types, but the dataframe framework that is introduced comes with its own rules on how data must be organized. You'll also see that there are several strong specializations within this ecosystem, such as timeseries data.  Pandas also builds frameworks on top of many other packages, which you will see pop up from time to time.  The strong connection to Python is also not lost, and you will usually see some core python tools and data structures appear, but this pattern is gradually going away as the pandas framework begins to support more activities.  However, this can also be a sign of someone newer to pandas who isn't yet intimately familiar with many of the tools available in the library.
 
-From a style standpoint, you'll find that many of the core python tools adopted into the cononical pandas framework live in the more advanced domain, so there is a near guarenteed possibility that novices will see a steady barrage of new syntax and tools.  There are many reasons for this, as those who are developing this tool are more advanced or professional python developers, and they are trying to adapt a general purpose programming language into a very specialized language for data at scale. That scale component often means that they will make the choice to sacrefice readability for speed, running with the presumption that their users will also have similar scale needs and accept that trade off.  Unfortunately, this means that novices to programming and python will struggle in trying to understand the syntax and purpose behind some of the common patterns used within this library.
+From a style standpoint, you'll find that many of the core python tools adopted into the canonical pandas framework live in the more advanced domain, so there is a near guaranteed possibility that novices will see a steady barrage of new syntax and tools.  There are many reasons for this, as those who are developing this tool are more advanced or professional python developers, and they are trying to adapt a general purpose programming language into a very specialized language for data at scale. That scale component often means that they will make the choice to sacrifice readability for speed, running with the presumption that their users will also have similar scale needs and accept that trade off.  Unfortunately, this means that novices to programming and python will struggle in trying to understand the syntax and purpose behind some of the common patterns used within this library.
 
-There will also be a stronger visible presence of more traditional computing vocabulary words and upper level maths vocabulary.  Both of these facts stem from the origins of the devolopers of the package.  Many have programmed in lower level languages before python, and are deliberately writing tools in pandas to help Python communicate with those languages because they tend to be computationally faster (this is the glue, as mentioned before). Many of the functions and services being created in pandas originate from linear algebra and other statistical areas, so it would only be natural for those items to retaisn that vocabulary. 
+There will also be a stronger visible presence of more traditional computing vocabulary words and upper level maths vocabulary.  Both of these facts stem from the origins of the developers of the package.  Many have programmed in lower level languages before python, and are deliberately writing tools in pandas to help Python communicate with those languages because they tend to be computationally faster (this is the glue, as mentioned before). Many of the functions and services being created in pandas originate from linear algebra and other statistical areas, so it would only be natural for those items to retains that vocabulary. 
 
-None of these things are bad necessarily, but they do represent a presumption of the community that users of this package have a working comfort in more traditional programming lanugages, linear algebra, and statistics.  Operationally, this means that novices who have only been exposed to Python's data structures (which are named and used in strongly different ways than many other languages) will face an additional vocabulary learning curve, because they will not always know the mapping of the traditional to the python ecosystem.  
+None of these things are bad necessarily, but they do represent a presumption of the community that users of this package have a working comfort in more traditional programming languages, linear algebra, and statistics.  Operationally, this means that novices who have only been exposed to Python's data structures (which are named and used in strongly different ways than many other languages) will face an additional vocabulary learning curve, because they will not always know the mapping of the traditional to the python ecosystem.  
 
 ### As a project
 
-While this is a free and volunteer developed package, many of the core maintainers have devolopment for it built into their jobs.  Pandas is also a fiscally sponsored project of NumFOCUS, a non-profit dedicated to supporting open souce projects and communities.  This means that they help pay for community building, some development, and computing resources (such as hosting and websites).  
+While this is a free and volunteer developed package, many of the core maintainers have development for it built into their jobs.  Pandas is also a fiscally sponsored project of NumFOCUS, a non-profit dedicated to supporting open source projects and communities.  This means that they help pay for community building, some development, and computing resources (such as hosting and websites).  
 
 
 ## What kind of data?
@@ -94,10 +94,10 @@ The premise of the dataframe does impose several restrictions on how you organiz
 
 ## What kind of platform?
 
-While pandas can be imported and used in any Python script so long as the library is correctly installed, the interactive nature of data analysis means that there are many special perks for those using it within the Jupyter environment.  The rendering of dataframes for viewing data is the primary example here.  So while you can print a dataframe, this library is really meant for use within a Jupyter notebook.  Notable exceptions to this would be for anyone using pandas strictly for data import/export convenienece, and interactive manipulation of data frames is not desired.
+While pandas can be imported and used in any Python script so long as the library is correctly installed, the interactive nature of data analysis means that there are many special perks for those using it within the Jupyter environment.  The rendering of dataframes for viewing data is the primary example here.  So while you can print a dataframe, this library is really meant for use within a Jupyter notebook.  Notable exceptions to this would be for anyone using pandas strictly for data import/export convenience, and interactive manipulation of data frames is not desired.
 
 ## Make it work time
 
-Let's go ahead and try to make some things work.  First step is to launch a Jupyter notebook window.  There are several ways to make this happen. You can do this locally, within PyCharm, or via the cloud.  I will be walking you through the cloud for this one.  The anaconda cloud has a nice interface and is also free for small things.  
+Go work through the jupyter notebook also in this repo.  You can either view it in GitHub and work through it on your local instance, but I've also set this repo up with mybinder.org. There is a link that you can click in the readme file that will open up a cloud hosted version of this.  You can make a new empty notebook in that and type along.  This file will not be saved once you close it down!  Take your notes elsewhere.
 
-You'll need to make an account and log in:  https://anaconda.org/jbednar/notebooks
+I even spell checked for you. ❤️
